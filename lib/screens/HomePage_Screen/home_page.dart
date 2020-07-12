@@ -313,10 +313,10 @@ class _HomePageState extends State {
                               Stack(
                                 children: <Widget>[
                                   Image.network(
-                                    jsonData["upperFeed"][index]["imgUrl"],
+                                    jsonData["myList"][index]["imgUrl"],
                                   ),
                                   Text(
-                                    jsonData["upperFeed"][index]["type"],
+                                    jsonData["myList"][index]["type"],
                                     style: TextStyle(
                                         fontSize: 15,
                                         color: Colors.white,
@@ -344,7 +344,9 @@ class _HomePageState extends State {
                                 textAlign: TextAlign.left,
                               ),
                               Text(
-                                "Laboris esse id laborum sunt ullamco labore ipsum ipsum non ea.",
+                                jsonData["myList"][index]["text"]
+                                    .toString()
+                                    .substring(1, 150),
                                 textAlign: TextAlign.left,
                               ),
                               Row(
